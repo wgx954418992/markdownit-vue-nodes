@@ -16,8 +16,8 @@ echo "警告: 有未提交的更改，请提交后再运行本脚本。"
 exit 1
 fi
 
-echo ">> 拉取远程最新 main 分支..."
-git pull origin main
+echo ">> 拉取远程最新 master 分支..."
+git pull origin master
 
 echo ">> 打包项目..."
 npm run build
