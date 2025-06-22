@@ -1,6 +1,5 @@
-import type MarkdownIt from 'markdown-it';
-import type { Token } from 'markdown-it';
-import type { VNode } from 'vue';
+import { default as MarkdownIt, Token } from 'markdown-it';
+import { VNode } from 'vue';
 /**
  * 将 markdown-it tokens 转换为 VNode 的渲染器。
  * 支持增量更新与 key 优化。

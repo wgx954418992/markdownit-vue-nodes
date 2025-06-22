@@ -39,13 +39,15 @@
     "rimraf": "^5.0.0",
     "typescript": "^5.0.0",
     "vite": "^5.0.0",
+    "vite-plugin-dts": "^4.5.4",
     "vue": "^3.0.0"
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rimraf dist && tsc --declaration --emitDeclarationOnly false && vite build --lib",
+    "build:types": "tsc -p tsconfig.json",
+    "build": "rimraf dist && tsc --declaration --emitDeclarationOnly false && npm run build:types && vite build",
     "clean": "rimraf dist",
     "prepare": "npm run build"
   }
